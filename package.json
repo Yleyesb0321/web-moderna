@@ -1,0 +1,20 @@
+{
+  "name": "web-moderna",
+  "version": "1.0.0",
+  "description": "Mi Primera Pagina Web Moderna",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://YLeyes@bitbucket.org/YLeyes/web-moderna.git"
+  },
+  "author": "Yecid Leyes",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/YLeyes/web-moderna#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}

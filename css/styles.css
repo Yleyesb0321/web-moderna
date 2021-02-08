@@ -1,0 +1,705 @@
+/*~ IMPORTANDO FUENTES*/
+@font-face{
+    font-family: "Oswald";
+    src: url(../Fonts/Oswald/Oswald-Regular);
+}
+:root{
+    --green:#1dd1a1;
+    --black:#222f3e;
+    --violet:#f368e0;
+    --white:#f5f6fa;
+    --title: 35px;
+    --text: 19px;
+
+}
+/*~ RESETEAMOS EL STILO QUE TRAE LA PAGINA POR DEFECTO*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*BODY*/
+body{
+    background: #fff;
+    overflow-x: hidden;
+
+}
+
+/*~ BOTON IR ARRIVA*/
+.go-top{
+    position: fixed;
+    bottom: 100px;
+    right: -100%;
+    width: 40px;
+    height: 40px;
+    border: 2px solid var(--green);
+    background: #fff;
+    z-index: 9999;
+    /*EFECTO*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 400ms;
+    border-radius: 40%;
+}
+.go-top:hover{
+    border: 2px solid var(--white);
+    background: var(--green);
+}
+.go-top:hover span{
+    color: var(--white);
+}
+.go-top > span{
+    font-size: 30px;
+    color: var(--black);
+}
+/*FIN BOTON IR ARRIVA*/
+
+/*~ LINEA DIAGONAL O SKEW*/
+.skew-abajo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 10vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+}
+.skew-arriba{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 10vh 100vw 0 0;
+    border-style: solid;
+    border-color: #fff transparent transparent  transparent;
+    z-index: 10;
+}
+/*FIN LINEA DIAGONAL O SKEW*/
+
+
+/*~ NAVEGATION*/
+#header{
+    position: relative;
+    width: 100%;
+}
+.menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+
+}
+.menu .logo-box{
+    margin-left: 60px;
+
+}
+.menu .logo-box h1 a{
+    text-decoration: none;
+    font-size: var(--title);
+    font-weight: 400;
+    color: var(--black);
+}
+.menu .list-container{
+    margin-right: 20px;
+}
+.menu .list-container .lists{
+    display: flex;
+}
+.menu .list-container .lists li{
+    list-style: none;
+}
+.menu .list-container .lists li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 8px;
+    color: var(--black);
+    border-radius: 24px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.menu .list-container .lists li a.activo{
+    background: var(--green);
+    color: #fff;
+}
+.menu .list-container .lists li a:hover{
+    background: var(--green);
+    color: #fff;
+}
+
+/*OCULTAR EL BTN MENU*/
+.btn-menu > .fa-bars{
+    display: none;
+}
+/*FIN OCULTAR EL BTN MENU*/
+/*FIN NAVEGATION*/
+
+/*~ IMG HEADER*/
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/header\ 1.jpg);
+    /*EFECTO*/
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.img-header .welcome{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*EFECTO*/
+    background: rgba(0, 0, 0, 0.6);
+    /*FIN*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.img-header .welcome h1{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 200;
+}
+.img-header .welcome hr{
+    width: 400px;
+    height: 2px;
+    background: #fff;
+    border: none;
+    margin-top: 5px;
+}
+.img-header .welcome p{
+    font-size: 20px;
+    color: #fff;
+    margin-top: 20px;
+}
+.img-header .welcome > button{
+    width: 170px;
+    height: 40px;
+    background: var(--green);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+/*EFECTO BOTON*/
+.img-header .welcome > button:hover{
+    background: var(--violet);
+}
+/*FIN IMG HEADER*/
+
+/*~ ACERCA DE NOSOTROS*/
+.acerca-de{
+    width: 100%;
+    margin-top: 120px;
+}
+.acerca-de .info-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.acerca-de .info-container h1{
+    font-size: 50px;
+    font-weight: 400;
+    color: var(--black);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.acerca-de .info-container p{
+    text-align: center;
+    font-size: 17px;
+    color: var(--black);
+    line-height: 35px;
+    margin: 10px 0px;
+}
+
+/*~ GALERIA*/
+.acerca-de .info-container .gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+
+}
+.acerca-de .info-container .gallery img{
+    width: calc(25% - 10px);
+    height: 300px;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.acerca-de .info-container .more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+.acerca-de .info-container .more button{
+    width: 120px;
+    height: 40px;
+    background: var(--green);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+.acerca-de .info-container .more button:hover{
+    background: var(--violet);
+}
+/*FIN GALERIA*/
+/*FIN ACERCA DE NOSOTROS*/
+
+/*~ PROYECTOS*/
+.proyectos{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*EFECTO*/
+    background-image: url("../img/img 22.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+}
+.proyectos .deg-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+.proyectos .ejeZproyecto{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.proyectos .container-proyecto{
+    width: 90%;
+    margin: auto;
+    padding-top: 100px;
+}
+.proyectos .container-proyecto .title{
+    border: 2px solid #fff;
+    padding: 10px;
+    text-align: center;
+    widows: 50%;
+    margin: auto;
+}
+.proyectos .container-proyecto .title h2{
+    font-size: 40px;
+    color: #fff;
+    font-weight: normal;
+}
+.proyectos .container-proyecto .title hr{
+    background: #fff;
+    width: 50%;
+    margin: 10px auto;
+}
+.proyectos .container-proyecto .proyecto-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+.proyectos .container-proyecto .proyecto-img img{
+    width: calc(30% - 10px);
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+/*FIN PROYECTOS*/
+
+/*~ TESTIMONIOS*/
+.testimonios{
+    width: 100%;
+    margin-top: 120px;
+}
+.testimonios .testimonios-title{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+.testimonios .testimonios-title h2{
+    font-size: 50px;
+    color: var(--black);
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.testimonios .testimonios-title hr{
+    width: 60%;
+    margin: auto;
+    height: 2px;
+    background: var(--black);
+    border: none;
+}
+.testimonios .box-testimonios{
+    width: 90%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.testimonios .box-testimonios .cards{
+    width: 45%;
+    margin: 20px;
+}
+.testimonios .box-testimonios .cards .card-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonios .box-testimonios .cards .card-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.testimonios .box-testimonios .cards .texto{
+    width: 100%;
+    border: 2px solid var(--green);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: 200ms;
+
+}
+.testimonios .box-testimonios .cards .texto h4{
+    color: var(--green);
+    font-weight: normal;
+    font-size: 27px;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: 200ms;
+}
+.testimonios .box-testimonios .cards .texto p{
+    font-size: 19px;
+    color: var(--black);
+    text-align: center;
+    line-height: 35px;
+    transition: 200ms;
+
+}
+.testimonios .box-testimonios .cards .texto:hover{
+    border: 2px solid var(--violet);
+}
+.testimonios .box-testimonios .cards .texto:hover h4{
+    color: var(--violet);
+}
+/*FIN TESTIMONIOS*/
+
+/*~FOOTER*/
+.footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*EFECTO*/
+    background-image: url("../img/footer 2.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+.footer .deg-footer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.footer .ejeZfooter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.footer .footer-content{
+    width: 90%;
+    padding: 100px;
+    margin: auto;
+  
+    
+}
+.footer .footer-content .footer-title{
+    width: 60%;
+    margin: auto;
+    border: 2px solid #fff;
+    padding: 15px;
+}
+.footer .footer-content .footer-title h2{
+    text-align: center;
+    color: white;
+    font-size: 35px;
+    font-weight: 400;
+    margin-bottom: 10px;
+
+}
+.footer .footer-content .footer-title hr{
+    width: 90%;
+    height: 2px;
+    margin: auto;
+}
+/*~ CONTACTO*/
+.footer .footer-content .formulario{
+    width: 60%;
+    background: #fff;
+    border-radius: 50px;
+    border: 2px solid var(--green);
+    margin: 50px auto;
+    padding: 30px;
+}
+.footer .footer-content .formulario #formulario{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.footer .footer-content .formulario #formulario label{
+    text-align: center;
+    color: var(--black);
+    font-size: 22px;
+    margin: 30px 0px 10px 0px;
+}
+.footer .footer-content .formulario #formulario input{
+    width: 90%;
+    height: 35px;
+    margin: auto;
+    border: 2px solid var(--green);
+    border-radius: 25px;
+    outline: none;
+    text-align: center;
+    font-size: 17px;
+    color: var(--black);
+}
+.footer .footer-content .formulario #formulario textarea{
+    width: 90%;
+    height: 200px;
+    margin: auto;
+    border: 2px solid var(--green);
+    border-radius: 25px;
+    outline: none;
+    font-size: 15px;
+    color: var(--black);
+    padding: 20px;
+}
+.footer .footer-content .formulario #formulario .send{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px;
+}
+.footer .footer-content .formulario #formulario  button{
+    width: 150px;
+    height: 40px;
+    background: var(--green);
+    border-radius: 24px;
+    border: none;
+    line-height: 40px;
+    outline: none;
+    font-size: 22px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: .5s;
+}
+.footer .footer-content .formulario #formulario button:hover{
+    background: var(--violet);
+}
+.footer .footer-content #formulario .mensaje-form{
+    width: 100%;
+    margin:auto;
+    padding:20px;
+}
+.footer .footer-content #formulario .mensaje-form p{
+    font-size: 22px;
+    color: var(--black);
+    line-height: 20px;
+}
+/*FIN CONTACTO*/
+/*~ COPYRIGHT*/
+.footer .footer-content .footer-text{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 5px solid #fff;
+    /*EFECTO*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer .footer-content .footer-text p{
+    color:#fff;
+    font-size: 20px;
+    text-align: center;
+}
+/*FIN COPYRIGHT*/
+/*FIN FOOTER*/
+
+/** DISEÑO RESPONSIVE*/
+/*~ MEDIA QUERY 900px*/
+@media only screen and (max-width:900px){
+    .btn-menu > .fa-bars{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 28px;
+        cursor: pointer;
+        transition: 0.5s;
+    }
+    .btn-menu > .fa-bars:hover{
+        color: var(--green);
+    }
+    .btn-menu > .fa-times{
+        color: var(--green);
+    }
+    .menu .list-container{
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: #fff;
+    }
+    .menu .list-container .lists{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 5px solid var(--green);
+
+    }
+    .menu .list-container .lists li{
+        width: 90%;
+        margin: 10px 0px;
+        border-bottom: 1px solid var(--green);
+        text-align: center;
+    }
+    .menu .list-container .lists li a{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .menu .list-container .lists li a.activo{
+        background: none;
+        color: var(--green);
+    }
+    .menu .list-container .lists li a:hover{
+        background: none;
+        color: var(--green);
+    }
+}
+/*~ MEDIA QUERY 773px*/
+@media only screen and (max-width: 773px){
+    /*IMG HEADER*/
+    .img-header .welcome{
+        font-size: 40px;
+    }
+    .img-header .welcome > button{
+        width: 130px;
+        font-size: 20px;
+    }
+
+    /*ACERCA DE NOSOTROS*/
+    .acerca-de .info-container .gallery{
+        flex-direction: column;
+    }
+    .acerca-de .info-container .gallery img{
+        width: 100%;
+    }
+
+    /*NUESTROS PROYECTOS*/
+    .proyectos .container-proyecto .proyecto-img img{
+        width: 80%;
+        margin-top: 30px;
+    }
+}
+/*~ MEDIA QUERY 590px*/
+@media only screen and (max-width: 590px){
+    /*IMG-HEADER*/
+    .img-header .welcome h1{
+        font-size: 30px;
+    }
+    .img-header .welcome hr{
+        width: 100px;
+    }
+    .img-header .welcome p{
+        font-size: 17px;
+    }
+    .img-header .welcome > button{
+        width: 100px;
+        font-size: 17px;
+    }
+
+}
+/*~ MEDIA QUERY 890px*/
+@media only screen and (max-width: 890px){
+    /*TESTIMONIOS*/
+    .testimonios .box-testimonios .cards .card-img img{
+        width: 200px;
+        height: 200px;
+    }
+    .testimonios .box-testimonios .cards{
+        width: 100%;
+    }
+    .testimonios .box-testimonios .cards .texto h4{
+        font-size: 25px;
+    }
+    .testimonios .box-testimonios .cards .texto p{
+        font-size: 17px;
+        line-height: 35px;
+    }
+}
+/*~ MEDIA QUERY 900px*/
+@media only screen and (max-width: 900px){
+    /*FOOTER*/
+    .footer .footer-content{
+        width: 85%;
+        padding: 20px;
+    }
+    .footer .footer-content #formulario input{
+        width: 100%;
+    }
+    .footer .footer-content #formulario textarea{
+        width: 100%;
+    }
+}
+/*~ MEDIA QUERY 590px*/
+@media only screen and (max-width: 590px){
+
+}
+
+/*FIN MEDIA QUERY*/
+/*FIN DISEÑO RESPONSIVE*/
+
+
